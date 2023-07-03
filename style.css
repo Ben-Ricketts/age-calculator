@@ -1,0 +1,23 @@
+.day,
+.month,
+.year {
+  color: gray;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-style: italic;
+  padding: 50px;
+  font-weight: bold;
+}
+
+.dates-worded {
+  padding: 50px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.input-fields {
+  padding: 50px;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 50px;
+}

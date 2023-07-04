@@ -49,19 +49,3 @@ let monthsOld = function () {
     return m;
   }
 };
-
-//   if (m1 < m2) {
-//     let m = m2 - m1 - 1;
-//     console.log(m);
-//     return m;
-//   } else {
-//     m2 + 12;
-//     let m = m2 - m1;
-//     return m;
-//   }
-// };
-
-// Output: "June"
-//months with 31 days = jan,march, may, july, august, oct, dec
-//months with 30 days = april, june, sep, nov
-//28 days= feb. leap years = 2020, 2016 and every 4 year//

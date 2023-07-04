@@ -8,7 +8,7 @@ let monthsInYear = 12;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    days.textContent = ddInput.value;
+    days.textContent = daysOld();
     years.textContent = workoutBirthYear();
     months.textContent = monthsInYear - mmInput.value;
   }
@@ -20,20 +20,23 @@ let workoutBirthYear = function () {
   return birhtYear;
 };
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    let d1 = document.getElementById("dd").value;
-    let d2 = new Date().getDate();
-    let m2 = 1 + new Date().getMonth();
-    let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    if (d1 > d2) {
-      d2 = d2 + months[m2 - 2];
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Enter") {
+let daysOld = function () {
+  let d1 = document.getElementById("dd").value;
+  let d2 = new Date().getDate();
+  let m2 = 1 + new Date().getMonth();
+  let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (d1 > d2) {
+    d2 = d2 + months[m2 - 2];
 
-      let d = d2 - d1;
-      return d;
-    }
+    let d = d2 - d1;
+    return d;
+  } else {
+    let d = d2 - d1;
+    return d;
   }
-});
+};
 
 // Output: "June"
 //months with 31 days = jan,march, may, july, august, oct, dec

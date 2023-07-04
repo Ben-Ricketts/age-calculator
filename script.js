@@ -4,24 +4,21 @@ let yyyyInput = document.getElementById("yyyy");
 let years = document.getElementById("years");
 let mmInput = document.getElementById("mm");
 let months = document.getElementById("month");
-let monthsInYear = 12;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     days.textContent = daysOld();
+    months.textContent = monthsOld();
     years.textContent = workoutBirthYear();
-    months.textContent = monthsInYear - mmInput.value;
   }
 });
-let currentYear = new Date().getFullYear();
 
 let workoutBirthYear = function () {
+  let currentYear = new Date().getFullYear();
   let birhtYear = currentYear - yyyyInput.value;
   return birhtYear;
 };
 
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "Enter") {
 let daysOld = function () {
   let d1 = document.getElementById("dd").value;
   let d2 = new Date().getDate();
@@ -37,6 +34,32 @@ let daysOld = function () {
     return d;
   }
 };
+
+let monthsOld = function () {
+  let m1 = document.getElementById("mm").value;
+  let m2 = 1 + new Date().getMonth();
+
+  if (m1 > m2) {
+    let m = m2 + 12 - m1;
+
+    return m;
+  } else {
+    let m = m2 - m1 - 1;
+    console.log(m);
+    return m;
+  }
+};
+
+//   if (m1 < m2) {
+//     let m = m2 - m1 - 1;
+//     console.log(m);
+//     return m;
+//   } else {
+//     m2 + 12;
+//     let m = m2 - m1;
+//     return m;
+//   }
+// };
 
 // Output: "June"
 //months with 31 days = jan,march, may, july, august, oct, dec

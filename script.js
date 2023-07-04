@@ -20,6 +20,22 @@ let workoutBirthYear = function () {
   return birhtYear;
 };
 
-// months with 31 days = jan,march, may, july, august, oct, dec
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    let d1 = document.getElementById("dd").value;
+    let d2 = new Date().getDate();
+    let m2 = 1 + new Date().getMonth();
+    let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (d1 > d2) {
+      d2 = d2 + months[m2 - 2];
+
+      let d = d2 - d1;
+      return d;
+    }
+  }
+});
+
+// Output: "June"
+//months with 31 days = jan,march, may, july, august, oct, dec
 //months with 30 days = april, june, sep, nov
-//28 days= feb. leap years = 2020, 2016 and every 4 years
+//28 days= feb. leap years = 2020, 2016 and every 4 year//

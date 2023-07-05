@@ -16,8 +16,47 @@
 }
 
 .input-fields {
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.input-placeholders {
   padding: 50px;
   text-align: center;
   padding-top: 20px;
   padding-left: 50px;
+}
+
+.years,
+.months,
+.days {
+  font-size: 125px;
+  font-family: "poppins", sans-serif;
+}
+
+#years,
+#month,
+#days {
+  color: rgb(136, 49, 136);
+  font-weight: 600;
+}
+
+.inputs {
+  font-family: sans-serif;
+  font-style: italic;
+  padding-left: 675px;
+  position: absolute;
+  top: 330px;
+  font-size: 12px;
+}
+.req1,
+.req2,
+.req3 {
+  padding-right: 75px;
+  color: red;
+}
+
+.hidden {
+  display: none;
 }

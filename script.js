@@ -5,6 +5,10 @@ let years = document.getElementById("years");
 let mmInput = document.getElementById("mm");
 let months = document.getElementById("month");
 
+let hidden = document.querySelector(".hidden");
+let d1 = document.getElementById("dd").value;
+console.log(d1);
+
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     days.textContent = daysOld();
@@ -45,7 +49,7 @@ let monthsOld = function () {
     return m;
   } else {
     let m = m2 - m1 - 1;
-    console.log(m);
+
     return m;
   }
 };

@@ -60,3 +60,30 @@
 .hidden {
   display: none;
 }
+
+.day-req {
+  font-family: sans-serif;
+  padding-right: 110px;
+  padding-left: 675px;
+  color: red;
+  font-size: 12px;
+}
+.month-req {
+  font-family: sans-serif;
+  padding-right: 100px;
+  color: red;
+  font-size: 12px;
+}
+
+.year-req {
+  font-family: sans-serif;
+  padding-right: 0px;
+  color: red;
+  font-size: 12px;
+}
+
+.day-hidden,
+.year-hidden,
+.month-hidden {
+  visibility: hidden;
+}

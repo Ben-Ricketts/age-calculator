@@ -5,6 +5,9 @@ let days = document.getElementById("days");
 let months = document.getElementById("month");
 let years = document.getElementById("years");
 let hidden = document.querySelector(".hidden");
+let dayHidden = document.querySelector(".day-hidden");
+let monthHidden = document.querySelector(".month-hidden");
+let yearHidden = document.querySelector(".year-hidden");
 let d1 = document.getElementById("dd").value;
 let m1 = document.getElementById("mm").value;
 let y1 = document.getElementById("yyyy").value;
@@ -21,6 +24,16 @@ document.addEventListener("keydown", function (e) {
     } else if (d1 === "" || m1 === "" || y1 === "") {
       hidden.classList.remove("hidden");
     } else {
+      hidden.classList.add("hidden");
+    }
+    if (d1 > 31) {
+      dayHidden.classList.remove("day-hidden");
+      hidden.classList.add("hidden");
+    } else if (m1 > 12) {
+      monthHidden.classList.remove("month-hidden");
+      hidden.classList.add("hidden");
+    } else if (y1 > new Date().getFullYear()) {
+      yearHidden.classList.remove("year-hidden");
       hidden.classList.add("hidden");
     }
   }

@@ -6,26 +6,25 @@
   font-family: sans-serif;
   font-style: italic;
   padding: 50px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .dates-worded {
   padding: 50px;
-  text-align: center;
   padding-top: 200px;
+  padding-left: 200px;
+  padding-right: 900px;
 }
 
 .input-fields {
-  text-align: center;
+  padding-left: 200px;
   padding-top: 20px;
-  padding-left: 50px;
 }
 
 .input-placeholders {
   padding: 50px;
-  text-align: center;
+  padding-left: 200px;
   padding-top: 20px;
-  padding-left: 50px;
 }
 
 .years,
@@ -45,7 +44,7 @@
 .inputs {
   font-family: sans-serif;
   font-style: italic;
-  padding-left: 675px;
+  padding-left: 200px;
   position: absolute;
   top: 330px;
   font-size: 12px;
@@ -64,7 +63,7 @@
 .day-req {
   font-family: sans-serif;
   padding-right: 110px;
-  padding-left: 675px;
+  padding-left: 200px;
   color: red;
   font-size: 12px;
 }
@@ -86,4 +85,13 @@
 .year-hidden,
 .month-hidden {
   visibility: hidden;
+}
+
+.clock-img {
+  position: absolute;
+  top: 0;
+  padding-top: 150px;
+  left: 1000px;
+  z-index: -1;
+  width: 700px;
 }

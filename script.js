@@ -1,21 +1,39 @@
 let ddInput = document.getElementById("dd");
-let days = document.getElementById("days");
-let yyyyInput = document.getElementById("yyyy");
-let years = document.getElementById("years");
 let mmInput = document.getElementById("mm");
+let yyyyInput = document.getElementById("yyyy");
+let days = document.getElementById("days");
 let months = document.getElementById("month");
-
+let years = document.getElementById("years");
 let hidden = document.querySelector(".hidden");
 let d1 = document.getElementById("dd").value;
-console.log(d1);
+let m1 = document.getElementById("mm").value;
+let y1 = document.getElementById("yyyy").value;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    days.textContent = daysOld();
-    months.textContent = monthsOld();
-    years.textContent = workoutBirthYear();
+    let d1 = document.getElementById("dd").value;
+    let m1 = document.getElementById("mm").value;
+    let y1 = document.getElementById("yyyy").value;
+    if (d1 > 0 && m1 > 0 && y1 > 0) {
+      days.textContent = daysOld();
+      months.textContent = monthsOld();
+      years.textContent = workoutBirthYear();
+    } else if (d1 === "" || m1 === "" || y1 === "") {
+      hidden.classList.remove("hidden");
+    } else {
+      hidden.classList.add("hidden");
+    }
   }
 });
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Enter") {
+//     if (d1 === "" || m1 === "" || y1 === "") {
+//       hidden.classList.remove("hidden");
+//     } else {
+//       hidden.classList.add("hidden");
+//     }
+//   }
+// });
 
 let workoutBirthYear = function () {
   let currentYear = new Date().getFullYear();

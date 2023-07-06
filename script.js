@@ -26,15 +26,26 @@ document.addEventListener("keydown", function (e) {
     } else {
       hidden.classList.add("hidden");
     }
-    if (d1 > 31) {
+    if (d1 > 31 || m1 > 12 || y1 > 2023) {
       dayHidden.classList.remove("day-hidden");
-      hidden.classList.add("hidden");
-    } else if (m1 > 12) {
       monthHidden.classList.remove("month-hidden");
-      hidden.classList.add("hidden");
-    } else if (y1 > new Date().getFullYear()) {
       yearHidden.classList.remove("year-hidden");
       hidden.classList.add("hidden");
+      days.textContent = null;
+      months.textContent = null;
+      years.textContent = null;
+    } else if (d1 > 31 && m1 > 12 && y1 > new Date().getFullYear()) {
+      dayHidden.classList.remove("day-hidden");
+      monthHidden.classList.remove("month-hidden");
+      yearHidden.classList.remove("year-hidden");
+      hidden.classList.add("hidden");
+      days.textContent = null;
+      months.textContent = null;
+      years.textContent = null;
+    } else {
+      dayHidden.classList.add("day-hidden");
+      monthHidden.classList.add("month-hidden");
+      yearHidden.classList.add("year-hidden");
     }
   }
 });

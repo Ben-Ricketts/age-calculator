@@ -95,3 +95,14 @@
   z-index: -1;
   width: 700px;
 }
+
+.btn {
+  margin-top: 15px;
+  margin-left: 420px;
+  border-radius: 20px;
+  text-decoration: solid;
+}
+
+.arrow-down {
+  height: 60px;
+}

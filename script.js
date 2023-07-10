@@ -11,9 +11,15 @@ let yearHidden = document.querySelector(".year-hidden");
 let d1 = document.getElementById("dd").value;
 let m1 = document.getElementById("mm").value;
 let y1 = document.getElementById("yyyy").value;
+let btn = document.querySelector(".btn");
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
+    calcAge();
+  }
+  btn.addEventListener("click", calcAge);
+
+  function calcAge() {
     let d1 = document.getElementById("dd").value;
     let m1 = document.getElementById("mm").value;
     let y1 = document.getElementById("yyyy").value;
@@ -49,15 +55,6 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "Enter") {
-//     if (d1 === "" || m1 === "" || y1 === "") {
-//       hidden.classList.remove("hidden");
-//     } else {
-//       hidden.classList.add("hidden");
-//     }
-//   }
-// });
 
 let workoutBirthYear = function () {
   let currentYear = new Date().getFullYear();
